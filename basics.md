@@ -43,13 +43,13 @@ desicions with the cost (in most cases) of complexity.
 ## Ethernet
 
 Here is the ethernet frame format, not including CRC and other sync bits.
-
+```
 +---------+---------+----------+------+---------+
 | MAC dst | MAC src | 802.1Q*  | Type | Payload |
 +-----------------------------------------------+
 | 6 octets| 6 octets| 4 octets |  2   | 46:1500 |
 +------------------------------+------+---------+
-
+```
 The 802.1Q 4 octets field is optional, used for VLAN and priority tagging.
 16 bits are reserved for the tag type (0x8100), the VLAN tag has 12 bits and the priority 3 bits.
 (1 bit is reserved for other uses)
